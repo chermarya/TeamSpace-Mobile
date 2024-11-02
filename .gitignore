@@ -1,0 +1,119 @@
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+[Bb][Ii][Nn]/
+[Oo][Bb][Jj]/
+[Ll]og/
+
+# Xamarin stuff
+*.apk
+*.ap_
+*.aab
+*.obb
+*.jar
+*.dex
+*.apk.*.d
+*.aar
+android/bin/
+android/obj/
+ios/bin/
+ios/obj/
+ios/Debug/
+ios/Release/
+ios/x64/
+ios/x86/
+ios/ARM/
+ios/ARM64/
+
+# Visual Studio for Mac
+.vscode/
+.idea/
+.project
+*.csproj.user
+*.csproj.DotSettings
+*.csproj.DotSettings.user
+.settings/
+.ionide/
+*.csproj.user.osx
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code files
+.vscode/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# Visual Studio workspace and test result files
+.vs/
+[Tt]est[Rr]esult*/
+ncrunch*,.user,ncrunchsolution.*
+[Uu]serSecrets/
+*.psess
+
+# Xamarin Android Designer
+[Oo]bj/.designtime/
+[Oo]bj/Debug/
+[Oo]bj/Release/
+
+# Xamarin iOS Designer
+[Oo]bj/iPhone/
+[Oo]bj/iPhoneSimulator/
+[Oo]bj/Debug/iPhone/
+[Oo]bj/Debug/iPhoneSimulator/
+[Oo]bj/Release/iPhone/
+[Oo]bj/Release/iPhoneSimulator/
+
+# Rider and ReSharper
+.idea/
+*.sln.iml
+*.sln.nupkg
+_.DotSettings.user
+
+# Npm packages
+node_modules/
+
+# .NET generated files
+*.dll
+*.pdb
+*.exe
+*.app
+*.ipa
+*.app.dSYM/
+*.exe.dSYM/
+*.dll.mdb
+*.mdb
+*.ilk
+*.meta
+*.gen
+*.generated
