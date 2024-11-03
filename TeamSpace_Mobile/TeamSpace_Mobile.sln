@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamSpace_Mobile", "TeamSpace_Mobile\TeamSpace_Mobile.csproj", "{CF9ED5B9-A69F-4ECE-8578-70E2DC7B1E76}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF9ED5B9-A69F-4ECE-8578-70E2DC7B1E76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF9ED5B9-A69F-4ECE-8578-70E2DC7B1E76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF9ED5B9-A69F-4ECE-8578-70E2DC7B1E76}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CF9ED5B9-A69F-4ECE-8578-70E2DC7B1E76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF9ED5B9-A69F-4ECE-8578-70E2DC7B1E76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF9ED5B9-A69F-4ECE-8578-70E2DC7B1E76}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {93617C4C-7FD3-42AD-B9E7-FB861D53562D}
+	EndGlobalSection
+EndGlobal
