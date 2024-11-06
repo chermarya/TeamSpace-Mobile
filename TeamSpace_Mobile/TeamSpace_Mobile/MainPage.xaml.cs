@@ -1,4 +1,4 @@
-﻿using TeamSpace_Mobile.Contents;
+﻿using TeamSpace_Mobile.Pages;
 
 namespace TeamSpace_Mobile;
 
@@ -8,6 +8,6 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
 
-        MainContentView.Content = new LoginContentView();
+        Application.Current.MainPage = new LoginPage();
     }
 }
