@@ -22,12 +22,12 @@
                     </Path.Fill>
                 </Path>
 
-                <Grid Grid.Row="1">
+                <Grid Grid.Row="1" x:Name="ContentGrid">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
-                        <RowDefinition Height="auto" />
-                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="80" />
+                        <RowDefinition Height="80" />
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
@@ -35,9 +35,9 @@
                         <RowDefinition Height="auto" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="65" />
+                        <ColumnDefinition Width="75" />
                         <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="65" />
+                        <ColumnDefinition Width="75" />
                     </Grid.ColumnDefinitions>
 
                     <Label 
@@ -53,9 +53,9 @@
                        Text="Sign in to your account" 
                        Margin="0,20,0,40" />
 
-                    <Frame 
+                    <!--<Frame 
                     Grid.Row="2" Grid.Column="1" 
-                    CornerRadius="25" 
+                    CornerRadius="40" 
                     HeightRequest="50" 
                     Padding="10,0" 
                     Margin="0,8,0,40" 
@@ -68,13 +68,14 @@
                             Placeholder="Username" 
                             FontFamily="TiltNeon" FontSize="18" 
                             TextColor="#262626" 
+                            Margin="10,0"
                             HorizontalOptions="FillAndExpand" 
                             BackgroundColor="Transparent" />
                         </StackLayout>
                     </Frame>
                     <Frame 
                     Grid.Row="3" Grid.Column="1" 
-                    CornerRadius="25" 
+                    CornerRadius="40" 
                     HeightRequest="50" 
                     Padding="10,0" 
                     Margin="0,0,0,0" 
@@ -82,20 +83,22 @@
                         <StackLayout Orientation="Horizontal">
                             <Image 
                             Source="pass_icon.png" 
-                            WidthRequest="24" HeightRequest="24" />
+                                HorizontalOptions="Center"
+                            WidthRequest="15.44" HeightRequest="19.32" />
                             <Entry 
                             Placeholder="Password" 
                             FontFamily="TiltNeon" FontSize="18" 
                             TextColor="#262626" 
+                            Margin="10,0"
                             HorizontalOptions="FillAndExpand" 
                             BackgroundColor="Transparent" 
                             IsPassword="True" />
                         </StackLayout>
-                    </Frame>
+                    </Frame>-->
                     <StackLayout 
                         Grid.Row="4" Grid.Column="1" 
                         Orientation="Horizontal" HorizontalOptions="End" 
-                        Margin="0,0,-20,0">
+                        Margin="0,-15,-35,0">
                         <Button
                             FontFamily="TiltNeon" FontSize="14" 
                             TextColor="#BEBEBE" 
@@ -105,7 +108,7 @@
                     </StackLayout>
 
                     <VerticalStackLayout 
-                        Grid.Row="5" Grid.Column="1" 
+                        Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3"
                         Margin="0,35,0,65">
                         <controls:SlideToConfirm 
                             x:Name="slideToConfirm" 
