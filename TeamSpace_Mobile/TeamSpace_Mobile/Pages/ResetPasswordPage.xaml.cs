@@ -7,7 +7,7 @@ public partial class ResetPasswordPage : ContentPage
 		InitializeComponent();
 	}
 
-    private void BtnClicked_Back(object sender, EventArgs e)
+    private void BtnClicked_GoBack(object sender, EventArgs e)
     {
         Application.Current.MainPage = new LoginPage();
     }

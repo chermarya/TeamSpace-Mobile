@@ -57,9 +57,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\back_icon.png" />
 	  <None Remove="Resources\Images\check_mark.gif" />
 	  <None Remove="Resources\Images\circle.png" />
 	  <None Remove="Resources\Images\google_icon.png" />
+	  <None Remove="Resources\Images\loader1.png" />
 	  <None Remove="Resources\Images\pass_icon.png" />
 	  <None Remove="Resources\Images\user_icon.png" />
 	</ItemGroup>
