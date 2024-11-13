@@ -57,13 +57,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\Images\back_arrow.png" />
+	  <None Remove="Resources\Images\back_icon.png" />
 	  <None Remove="Resources\Images\check_mark.gif" />
 	  <None Remove="Resources\Images\circle.png" />
 	  <None Remove="Resources\Images\email_icon.png" />
 	  <None Remove="Resources\Images\eye_invis_icon.png" />
 	  <None Remove="Resources\Images\eye_vis_icon.png" />
 	  <None Remove="Resources\Images\google_icon.png" />
+	  <None Remove="Resources\Images\loader1.png" />
 	  <None Remove="Resources\Images\pass_icon.png" />
 	  <None Remove="Resources\Images\phone_icon.png" />
 	  <None Remove="Resources\Images\right_arrow.png" />
