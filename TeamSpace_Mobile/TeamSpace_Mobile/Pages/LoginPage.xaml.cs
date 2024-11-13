@@ -146,6 +146,6 @@ public partial class LoginPage : ContentPage
 
     private void BtnClicked_LogIn(object sender, EventArgs e)
     {
-        Application.Current.MainPage = new UserProfilePage();
+        Application.Current.MainPage = new ContainerStartPage();
     }
 }

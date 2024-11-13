@@ -47,7 +47,6 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.png" Resize="True" BaseSize="300,185" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -63,11 +62,21 @@
 	  <None Remove="Resources\Images\email_icon.png" />
 	  <None Remove="Resources\Images\eye_invis_icon.png" />
 	  <None Remove="Resources\Images\eye_vis_icon.png" />
+	  <None Remove="Resources\Images\files_icon_default.png" />
+	  <None Remove="Resources\Images\files_icon_selected.png" />
 	  <None Remove="Resources\Images\google_icon.png" />
 	  <None Remove="Resources\Images\loader1.png" />
+	  <None Remove="Resources\Images\overview_icon_default.png" />
+	  <None Remove="Resources\Images\overview_icon_selected.png" />
 	  <None Remove="Resources\Images\pass_icon.png" />
 	  <None Remove="Resources\Images\phone_icon.png" />
+	  <None Remove="Resources\Images\profile_icon_default.png" />
+	  <None Remove="Resources\Images\profile_icon_selected.png" />
+	  <None Remove="Resources\Images\recruiters_icon_default.png" />
+	  <None Remove="Resources\Images\recruiters_icon_selected.png" />
 	  <None Remove="Resources\Images\right_arrow.png" />
+	  <None Remove="Resources\Images\schedule_icon_default.png" />
+	  <None Remove="Resources\Images\schedule_icon_selected.png" />
 	  <None Remove="Resources\Images\user_icon.png" />
 	</ItemGroup>
 
@@ -82,6 +91,24 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Pages\ContainerStartPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Contents\FilesContent.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Contents\OverviewContent.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Contents\ProfileContent.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Contents\RecruitersContent.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Contents\ScheduleContent.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\CreateAccountPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -92,9 +119,6 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\ResetPasswordPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Pages\UserProfilePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

@@ -188,6 +188,6 @@ public partial class CreateAccountPage : ContentPage
 
     private void OnSlideConfirmed(object sender, EventArgs e)
     {
-        Application.Current.MainPage = new UserProfilePage();
+        Application.Current.MainPage = new ContainerStartPage();
     }
 }
