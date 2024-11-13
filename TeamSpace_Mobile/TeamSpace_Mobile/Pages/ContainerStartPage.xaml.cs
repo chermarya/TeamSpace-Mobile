@@ -189,23 +189,21 @@ public partial class ContainerStartPage : ContentPage
 
         for (int i = 0; i < imgNames.Length; i++)
         {
-            NavigateStack.Add(
+            NavigateStack.Add(new VerticalStackLayout
+            {
+                navigateBtns[i],
                 new VerticalStackLayout
                 {
-                    navigateBtns[i],
-                    new VerticalStackLayout
+                    Margin = new Thickness(20,-50,20,0),
+                    HorizontalOptions = LayoutOptions.Center,
+                    VerticalOptions = LayoutOptions.Center,
+                    Children =
                     {
-                        Margin = new Thickness(20,-50,20,0),
-                        HorizontalOptions = LayoutOptions.Center,
-                        VerticalOptions = LayoutOptions.Center,
-                        Children =
-                        {
-                            navigateImgs[i],
-                            navigateLbls[i]
-                        }
+                        navigateImgs[i],
+                        navigateLbls[i]
                     }
                 }
-            );
+            });
         }
     }
 }

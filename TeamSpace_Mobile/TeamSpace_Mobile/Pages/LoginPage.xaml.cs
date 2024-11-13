@@ -1,3 +1,5 @@
+using TeamSpace_Mobile.Controls;
+
 namespace TeamSpace_Mobile.Pages;
 
 public partial class LoginPage : ContentPage
@@ -7,17 +9,17 @@ public partial class LoginPage : ContentPage
         Source = "eye_invis_icon.png",
         HorizontalOptions = LayoutOptions.Center,
         WidthRequest = 24,
-        HeightRequest = 24
+        HeightRequest = 24,
+        Margin = new Thickness(0, 0, 0, -3)
     };
 
-    Entry passEntry = new Entry
+    BorderlessEntry passEntry = new BorderlessEntry
     {
         FontFamily = "TiltNeon",
         FontSize = 18,
         TextColor = Color.FromArgb("#262626"),
-        Margin = new Thickness(10, 0),
+        Margin = new Thickness(10, 0, 10, -3),
         HorizontalOptions = LayoutOptions.FillAndExpand,
-        BackgroundColor = Colors.Transparent,
         IsPassword = true
     };
 
@@ -28,7 +30,7 @@ public partial class LoginPage : ContentPage
     };
     Dictionary<int, double[]> frameParameters = new Dictionary<int, double[]>()
     {
-        { 2, [24, 24]},
+        { 2, [14.19, 18]},
         { 3, [15.44, 19.32]}
     };
 
@@ -100,15 +102,14 @@ public partial class LoginPage : ContentPage
             }
             else
             {
-                content.Children.Add(new Entry
+                content.Children.Add(new BorderlessEntry
                 {
                     Placeholder = frameNames[i][1],
                     FontFamily = "TiltNeon",
                     FontSize = 18,
                     TextColor = Color.FromArgb("#262626"),
-                    Margin = new Thickness(10, 0),
+                    Margin = new Thickness(10, 0, 10, -3),
                     HorizontalOptions = LayoutOptions.FillAndExpand,
-                    BackgroundColor = Colors.Transparent
                 });
             }
 

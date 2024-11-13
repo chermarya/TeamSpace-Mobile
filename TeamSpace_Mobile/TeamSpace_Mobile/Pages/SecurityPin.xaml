@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TeamSpace_Mobile.Pages.SecurityPin"
+             xmlns:controls="clr-namespace:TeamSpace_Mobile.Controls"
              Title="">
 
     <!-- Gradient Background -->
@@ -47,34 +48,31 @@
                 <HorizontalStackLayout Spacing="15" HorizontalOptions="Center" Margin="0, 0, 0, 70">
                     <!-- Each Entry as a Circle -->
                     <Frame BorderColor="#0EAD69" CornerRadius="50" WidthRequest="45" HeightRequest="45" Padding="0">
-                        <Entry x:Name="Entry1" MaxLength="1" FontSize="16" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                        <controls:BorderlessEntry x:Name="Entry1" MaxLength="1" FontSize="16" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
                TextChanged="OnEntryTextChanged" Keyboard="Numeric" IsVisible="True" />
                     </Frame>
                     <Frame BorderColor="#0EAD69" CornerRadius="50" WidthRequest="45" HeightRequest="45" Padding="0">
-                        <Entry x:Name="Entry2" MaxLength="1" FontSize="16" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                        <controls:BorderlessEntry x:Name="Entry2" MaxLength="1" FontSize="16" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
                TextChanged="OnEntryTextChanged" Keyboard="Numeric" IsVisible="True" />
                     </Frame>
                     <Frame BorderColor="#0EAD69" CornerRadius="50" WidthRequest="45" HeightRequest="45" Padding="0">
-                        <Entry x:Name="Entry3" MaxLength="1" FontSize="16" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                        <controls:BorderlessEntry x:Name="Entry3" MaxLength="1" FontSize="16" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
                TextChanged="OnEntryTextChanged" Keyboard="Numeric" IsVisible="True" />
                     </Frame>
                     <Frame BorderColor="#0EAD69" CornerRadius="50" WidthRequest="45" HeightRequest="45" Padding="0">
-                        <Entry x:Name="Entry4" MaxLength="1" FontSize="16" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                        <controls:BorderlessEntry x:Name="Entry4" MaxLength="1" FontSize="16" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
                TextChanged="OnEntryTextChanged" Keyboard="Numeric" IsVisible="True" />
                     </Frame>
                     <Frame BorderColor="#0EAD69" CornerRadius="50" WidthRequest="45" HeightRequest="45" Padding="0">
-                        <Entry x:Name="Entry5" MaxLength="1" FontSize="16" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                        <controls:BorderlessEntry x:Name="Entry5" MaxLength="1" FontSize="16" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
                TextChanged="OnEntryTextChanged" Keyboard="Numeric" IsVisible="True" />
                     </Frame>
                     <Frame BorderColor="#0EAD69" CornerRadius="50" WidthRequest="45" HeightRequest="45" Padding="0">
-                        <Entry x:Name="Entry6" MaxLength="1" FontSize="16" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                        <controls:BorderlessEntry x:Name="Entry6" MaxLength="1" FontSize="16" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
                TextChanged="OnEntryTextChanged" Keyboard="Numeric" IsVisible="True" />
                     </Frame>
                 </HorizontalStackLayout>
-
-
-
-
+                
                 <!-- Accept and Send Again Buttons -->
                 <Button Text="Accept"
                         FontFamily="TiltNeon" FontSize="20"

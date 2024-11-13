@@ -1,3 +1,5 @@
+using TeamSpace_Mobile.Controls;
+
 namespace TeamSpace_Mobile.Pages;
 
 public partial class CreatePasswordPage : ContentPage
@@ -7,34 +9,34 @@ public partial class CreatePasswordPage : ContentPage
         Source = "eye_invis_icon.png",
         HorizontalOptions = LayoutOptions.Center,
         WidthRequest = 24,
-        HeightRequest = 24
+        HeightRequest = 24,
+        Margin = new Thickness(0, 0, 0, -3)
     };
     ImageButton imgBtnEyeConfirm = new ImageButton
     {
         Source = "eye_invis_icon.png",
         HorizontalOptions = LayoutOptions.Center,
         WidthRequest = 24,
-        HeightRequest = 24
+        HeightRequest = 24,
+        Margin = new Thickness(0, 0, 0, -3)
     };
 
-    Entry createPassEntry = new Entry
+    BorderlessEntry createPassEntry = new BorderlessEntry
     {
         FontFamily = "TiltNeon",
         FontSize = 18,
         TextColor = Color.FromArgb("#262626"),
-        Margin = new Thickness(10, 0),
+        Margin = new Thickness(10, 0, 10, -3),
         HorizontalOptions = LayoutOptions.FillAndExpand,
-        BackgroundColor = Colors.Transparent,
         IsPassword = true
     };
-    Entry confirmPassEntry = new Entry
+    BorderlessEntry confirmPassEntry = new BorderlessEntry
     {
         FontFamily = "TiltNeon",
         FontSize = 18,
         TextColor = Color.FromArgb("#262626"),
-        Margin = new Thickness(10, 0),
+        Margin = new Thickness(10, 0, 10, -3),
         HorizontalOptions = LayoutOptions.FillAndExpand,
-        BackgroundColor = Colors.Transparent,
         IsPassword = true
     };
 
@@ -47,7 +49,7 @@ public partial class CreatePasswordPage : ContentPage
     };
     Dictionary<int, double[]> frameParameters = new Dictionary<int, double[]>()
     {
-        { 1, [24, 24]},
+        { 1, [14.19, 18]},
         { 2, [15.44, 19.32]},
         { 3, [15.44, 19.32]}
     };
@@ -134,7 +136,7 @@ public partial class CreatePasswordPage : ContentPage
                 }
                 else
                 {
-                    content.Children.Add(new Entry
+                    content.Children.Add(new BorderlessEntry
                     {
                         Placeholder = frameNames[i][1],
                         FontFamily = "TiltNeon",
@@ -142,7 +144,6 @@ public partial class CreatePasswordPage : ContentPage
                         TextColor = Color.FromArgb("#262626"),
                         Margin = new Thickness(10, 0),
                         HorizontalOptions = LayoutOptions.FillAndExpand,
-                        BackgroundColor = Colors.Transparent
                     });
                 }
             }
