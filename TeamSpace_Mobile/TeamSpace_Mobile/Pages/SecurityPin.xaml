@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TeamSpace_Mobile.Pages.SecurityPin"
+             Title="">
+
+    <!-- Gradient Background -->
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#E9BD28" Offset="0.1" />
+            <GradientStop Color="#CC6299" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <VerticalStackLayout >
+
+        <!-- Back Button -->
+        <ImageButton Source="back_icon.png"
+                 WidthRequest="30" HeightRequest="22"
+                 HorizontalOptions="Start"
+                 Margin="34, 36, 0, 0"
+                 Clicked="BtnClicked_GoBack" />
+
+        <!-- Title -->
+        <Label Text="Security Pin" 
+            FontFamily="TiltNeon" FontSize="35"                
+            HorizontalOptions="Center" 
+            TextColor="#093030" 
+            Margin="0, 40, 0, 45"/>
+
+        <!-- Card Layout with Rounded Corners -->
+        <Frame BackgroundColor="#FFFFFF"                     
+            CornerRadius="70"
+            HeightRequest="1000">
+
+            <VerticalStackLayout HorizontalOptions="Center">
+
+                <!-- Security Pin Label -->
+                <Label Text="Enter Security Pin"
+                       FontSize="20"
+                       FontFamily="TiltNeon"
+                       TextColor="#093030"
+                       HorizontalOptions="Center" 
+                       Margin="0, 10"/>
+
+                <!-- Pin Entry Display -->
+                <HorizontalStackLayout Spacing="15" HorizontalOptions="Center" Margin="0, 0, 0, 70">
+                    <!-- Each Entry as a Circle -->
+                    <Frame BorderColor="#0EAD69" CornerRadius="50" WidthRequest="45" HeightRequest="45" Padding="0">
+                        <Entry x:Name="Entry1" MaxLength="1" FontSize="16" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+               TextChanged="OnEntryTextChanged" Keyboard="Numeric" IsVisible="True" />
+                    </Frame>
+                    <Frame BorderColor="#0EAD69" CornerRadius="50" WidthRequest="45" HeightRequest="45" Padding="0">
+                        <Entry x:Name="Entry2" MaxLength="1" FontSize="16" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+               TextChanged="OnEntryTextChanged" Keyboard="Numeric" IsVisible="True" />
+                    </Frame>
+                    <Frame BorderColor="#0EAD69" CornerRadius="50" WidthRequest="45" HeightRequest="45" Padding="0">
+                        <Entry x:Name="Entry3" MaxLength="1" FontSize="16" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+               TextChanged="OnEntryTextChanged" Keyboard="Numeric" IsVisible="True" />
+                    </Frame>
+                    <Frame BorderColor="#0EAD69" CornerRadius="50" WidthRequest="45" HeightRequest="45" Padding="0">
+                        <Entry x:Name="Entry4" MaxLength="1" FontSize="16" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+               TextChanged="OnEntryTextChanged" Keyboard="Numeric" IsVisible="True" />
+                    </Frame>
+                    <Frame BorderColor="#0EAD69" CornerRadius="50" WidthRequest="45" HeightRequest="45" Padding="0">
+                        <Entry x:Name="Entry5" MaxLength="1" FontSize="16" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+               TextChanged="OnEntryTextChanged" Keyboard="Numeric" IsVisible="True" />
+                    </Frame>
+                    <Frame BorderColor="#0EAD69" CornerRadius="50" WidthRequest="45" HeightRequest="45" Padding="0">
+                        <Entry x:Name="Entry6" MaxLength="1" FontSize="16" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+               TextChanged="OnEntryTextChanged" Keyboard="Numeric" IsVisible="True" />
+                    </Frame>
+                </HorizontalStackLayout>
+
+
+
+
+                <!-- Accept and Send Again Buttons -->
+                <Button Text="Accept"
+                        FontFamily="TiltNeon" FontSize="20"
+                        BackgroundColor="#FFAAF4"
+                        TextColor="#093030"
+                        CornerRadius="30"
+                        WidthRequest="170"
+                        HeightRequest="50"
+                        HorizontalOptions="Center" 
+                        Margin="0, 0, 0, 10"/>
+
+                <Button Text="Send Again"
+                        FontFamily="TiltNeon" FontSize="20"
+                        BackgroundColor="#DFF7E2"
+                        TextColor="#0E3E3E"
+                        CornerRadius="30"
+                        WidthRequest="170"
+                        HeightRequest="50"
+                        HorizontalOptions="Center" 
+                        Margin="0, 0, 0, 195"/>
+
+                <Image Source="loader.png" 
+                       WidthRequest="100"
+                       HeightRequest="115"
+                       HorizontalOptions="Center" />
+
+            </VerticalStackLayout>
+        </Frame>
+    </VerticalStackLayout>
+
+</ContentPage>

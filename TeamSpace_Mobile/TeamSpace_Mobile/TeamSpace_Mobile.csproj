@@ -65,7 +65,7 @@
 	  <None Remove="Resources\Images\files_icon_default.png" />
 	  <None Remove="Resources\Images\files_icon_selected.png" />
 	  <None Remove="Resources\Images\google_icon.png" />
-	  <None Remove="Resources\Images\loader1.png" />
+	  <None Remove="Resources\Images\loader.png" />
 	  <None Remove="Resources\Images\overview_icon_default.png" />
 	  <None Remove="Resources\Images\overview_icon_selected.png" />
 	  <None Remove="Resources\Images\pass_icon.png" />
@@ -119,6 +119,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\ResetPasswordPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\SecurityPin.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
