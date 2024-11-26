@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TeamSpace_Mobile.Pages.ConfirmEmailPage"
+             Title="ConfirmEmailPage">
+    <ContentView>
+        <ContentView.Content>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+
+                <Path Margin="-200,0,0,0"
+                Data="M91.9756 118.946C54.6807 117.406 45.3404 74.8318 8.04627 73.2746C4.51657 73.1272 -1 73.2746 -1 73.2746V0H390C390 0 364.049 43.327 337.733 59.7238C289.777 89.6039 247.09 43.3626 192.992 59.7238C149.211 72.9649 137.682 120.832 91.9756 118.946Z">
+                    <Path.Fill>
+                        <LinearGradientBrush StartPoint="-0.001,-0.001" EndPoint="0.18,1.8">
+                            <GradientStop Color="#EECE13" Offset="0" />
+                            <GradientStop Color="#B210FF" Offset="1" />
+                        </LinearGradientBrush>
+                    </Path.Fill>
+                </Path>
+
+                <AbsoluteLayout Margin="35,80,0,0">
+                    <Button
+                        BackgroundColor="Transparent"
+                        BorderColor="Transparent"
+                        WidthRequest="40" HeightRequest="32"
+                        Clicked="BtnClicked_Back"
+                    />
+                    <Image
+                        Source="back_arrow.png"
+                        WidthRequest="30" HeightRequest="22"
+                        Margin="5" 
+                    />
+                </AbsoluteLayout>
+
+                <Grid Grid.Row="1" x:Name="ContentGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="90" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="55" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="75" />
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="75" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image
+                        Grid.Row="1" Grid.Column="1"
+                        Source="letter_icon.png"
+                        WidthRequest="214" HeightRequest="240"
+                        HorizontalOptions="Center"
+                    />
+
+                    <Label
+                        x:Name="UsernameLabel"
+                        Grid.Row="2" Grid.Column="1"
+                        TextColor="#141414"
+                        FontFamily="TiltNeon" FontSize="36"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                    />
+
+                    <Label
+                        Grid.Row="3" Grid.Column="1"
+                        TextColor="#343434"
+                        WidthRequest="274"
+                        Text="Please confirm your email adress"
+                        FontFamily="TiltNeon" FontSize="29"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                    />
+
+                    <Button
+                        Grid.Row="5" Grid.Column="1"
+                        Padding="0"
+                        CornerRadius="15"
+                        WidthRequest="253" HeightRequest="45"
+                        BackgroundColor="#1E1E1E"
+                        TextColor="#FFF"
+                        Text="Confirm"
+                        FontFamily="TiltNeon" FontSize="25"
+                        Clicked="BtnClicked_Confirm"
+                    />
+
+                </Grid>
+
+                <Path Grid.Row="2" 
+                      RotationX="180" RotationY="180" 
+                      Margin="0,0,0,-35"
+                Data="M91.9756 118.946C54.6807 117.406 45.3404 74.8318 8.04627 73.2746C4.51657 73.1272 -1 73.2746 -1 73.2746V0H390C390 0 364.049 43.327 337.733 59.7238C289.777 89.6039 247.09 43.3626 192.992 59.7238C149.211 72.9649 137.682 120.832 91.9756 118.946Z">
+                    <Path.Fill>
+                        <LinearGradientBrush StartPoint="-0.001,-0.001" EndPoint="0.18,1.9">
+                            <GradientStop Color="#EECE13" Offset="0" />
+                            <GradientStop Color="#B210FF" Offset="1" />
+                        </LinearGradientBrush>
+                    </Path.Fill>
+                </Path>
+            </Grid>
+        </ContentView.Content>
+    </ContentView>
+</ContentPage>

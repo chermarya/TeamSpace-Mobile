@@ -65,6 +65,7 @@
 	  <None Remove="Resources\Images\files_icon_default.png" />
 	  <None Remove="Resources\Images\files_icon_selected.png" />
 	  <None Remove="Resources\Images\google_icon.png" />
+	  <None Remove="Resources\Images\letter_icon.png" />
 	  <None Remove="Resources\Images\loader.png" />
 	  <None Remove="Resources\Images\overview_icon_default.png" />
 	  <None Remove="Resources\Images\overview_icon_selected.png" />
@@ -91,6 +92,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Pages\ConfirmEmailPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\ContainerStartPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
