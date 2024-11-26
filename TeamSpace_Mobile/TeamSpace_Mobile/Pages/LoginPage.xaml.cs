@@ -15,6 +15,7 @@ public partial class LoginPage : ContentPage
 
     BorderlessEntry passEntry = new BorderlessEntry
     {
+        Placeholder = "Password",
         FontFamily = "TiltNeon",
         FontSize = 18,
         TextColor = Color.FromArgb("#262626"),
@@ -22,12 +23,16 @@ public partial class LoginPage : ContentPage
         HorizontalOptions = LayoutOptions.FillAndExpand,
         IsPassword = true
     };
-
-    Dictionary<int, string[]> frameNames = new Dictionary<int, string[]>()
+    BorderlessEntry usernameEntry = new BorderlessEntry
     {
-        { 2, ["user", "Username"]},
-        { 3, ["pass", "Password"]}
+        Placeholder = "Username",
+        FontFamily = "TiltNeon",
+        FontSize = 18,
+        TextColor = Color.FromArgb("#262626"),
+        Margin = new Thickness(10, 0, 10, -3),
+        HorizontalOptions = LayoutOptions.FillAndExpand,
     };
+
     Dictionary<int, double[]> frameParameters = new Dictionary<int, double[]>()
     {
         { 2, [14.19, 18]},
@@ -68,6 +73,8 @@ public partial class LoginPage : ContentPage
             EndPoint = new Point(0, 1),
         };
 
+        string[] iconNames = ["user", "pass"];
+        BorderlessEntry[] entryNames = [passEntry, usernameEntry];
 
         for (int i = 2; i <= 3; i++)
         {
@@ -78,13 +85,15 @@ public partial class LoginPage : ContentPage
                 {
                     new Image
                     {
-                        Source = frameNames[i][0] + "_icon.png",
+                        Source = iconNames[i - 2] + "_icon.png",
                         HorizontalOptions = LayoutOptions.Center,
                         WidthRequest = frameParameters[i][0],
                         HeightRequest = frameParameters[i][1]
                     }
                 }
             };
+
+            content.Children.Add(entryNames[i - 2]);
 
             Frame mainFrame = new Frame
             {
@@ -94,24 +103,11 @@ public partial class LoginPage : ContentPage
                 Content = content
             };
 
-            if (frameNames[i][0] == "pass")
+            if (i == 3)
             {
-                content.Children.Add(passEntry);
-                passEntry.Placeholder = frameNames[i][1];
                 content.Children.Add(imgBtnEye);
             }
-            else
-            {
-                content.Children.Add(new BorderlessEntry
-                {
-                    Placeholder = frameNames[i][1],
-                    FontFamily = "TiltNeon",
-                    FontSize = 18,
-                    TextColor = Color.FromArgb("#262626"),
-                    Margin = new Thickness(10, 0, 10, -3),
-                    HorizontalOptions = LayoutOptions.FillAndExpand,
-                });
-            }
+            
 
             Frame borderFrame = new Frame
             {

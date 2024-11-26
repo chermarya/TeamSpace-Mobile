@@ -21,8 +21,18 @@ public partial class CreatePasswordPage : ContentPage
         Margin = new Thickness(0, 0, 0, -3)
     };
 
+    BorderlessEntry usernameEntry = new BorderlessEntry
+    {
+        Placeholder = "Username",
+        FontFamily = "TiltNeon",
+        FontSize = 18,
+        TextColor = Color.FromArgb("#262626"),
+        Margin = new Thickness(10, 0),
+        HorizontalOptions = LayoutOptions.FillAndExpand,
+    };
     BorderlessEntry createPassEntry = new BorderlessEntry
     {
+        Placeholder = "Password",
         FontFamily = "TiltNeon",
         FontSize = 18,
         TextColor = Color.FromArgb("#262626"),
@@ -32,6 +42,7 @@ public partial class CreatePasswordPage : ContentPage
     };
     BorderlessEntry confirmPassEntry = new BorderlessEntry
     {
+        Placeholder = "Confirm Password",
         FontFamily = "TiltNeon",
         FontSize = 18,
         TextColor = Color.FromArgb("#262626"),
@@ -40,12 +51,11 @@ public partial class CreatePasswordPage : ContentPage
         IsPassword = true
     };
 
-
     Dictionary<int, string[]> frameNames = new Dictionary<int, string[]>()
     {
-        { 1, ["user", "Username", "username"]},
-        { 2, ["pass", "Password", "pass_create"]},
-        { 3, ["pass", "Confirm Password", "pass_confirm"]},
+        { 1, ["user", "username"]},
+        { 2, ["pass", "pass_create"]},
+        { 3, ["pass", "pass_confirm"]},
     };
     Dictionary<int, double[]> frameParameters = new Dictionary<int, double[]>()
     {
@@ -102,7 +112,6 @@ public partial class CreatePasswordPage : ContentPage
             EndPoint = new Point(0, 1),
         };
 
-
         for (int i = 1; i <= 3; i++)
         {
             StackLayout content = new StackLayout
@@ -120,31 +129,21 @@ public partial class CreatePasswordPage : ContentPage
                 }
             };
 
-            if (frameNames[i][2] == "pass_create")
+            if (frameNames[i][1] == "pass_create")
             {
                 content.Children.Add(createPassEntry);
-                createPassEntry.Placeholder = frameNames[i][1];
                 content.Children.Add(imgBtnEyeCreate);
             }
             else
             {
-                if (frameNames[i][2] == "pass_confirm")
+                if (frameNames[i][1] == "pass_confirm")
                 {
                     content.Children.Add(confirmPassEntry);
-                    confirmPassEntry.Placeholder = frameNames[i][1];
                     content.Children.Add(imgBtnEyeConfirm);
                 }
                 else
                 {
-                    content.Children.Add(new BorderlessEntry
-                    {
-                        Placeholder = frameNames[i][1],
-                        FontFamily = "TiltNeon",
-                        FontSize = 18,
-                        TextColor = Color.FromArgb("#262626"),
-                        Margin = new Thickness(10, 0),
-                        HorizontalOptions = LayoutOptions.FillAndExpand,
-                    });
+                    content.Children.Add(usernameEntry);
                 }
             }
 
@@ -180,6 +179,9 @@ public partial class CreatePasswordPage : ContentPage
 
     private void OnSlideConfirmed(object sender, EventArgs e)
     {
+        string user = usernameEntry.Text;
+        string pass1 = createPassEntry.Text;
+        string pass2 = confirmPassEntry.Text;
         Application.Current.MainPage = new ContainerStartPage();
     }
 }

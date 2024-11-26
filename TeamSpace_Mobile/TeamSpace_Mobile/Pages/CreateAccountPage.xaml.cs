@@ -21,6 +21,9 @@ public partial class CreateAccountPage : ContentPage
         Margin = new Thickness(0, 0, 0, -3)
     };
 
+    BorderlessEntry usernameEntry = new BorderlessEntry();
+    BorderlessEntry emailEntry = new BorderlessEntry();
+    BorderlessEntry mobileEntry = new BorderlessEntry();
     BorderlessEntry createPassEntry = new BorderlessEntry
     {
         FontFamily = "TiltNeon",
@@ -106,6 +109,7 @@ public partial class CreateAccountPage : ContentPage
             EndPoint = new Point(0, 1),
         };
 
+        BorderlessEntry[] entryNames = [usernameEntry, emailEntry, mobileEntry];
 
         for (int i = 1; i <= 5; i++)
         {
@@ -140,15 +144,14 @@ public partial class CreateAccountPage : ContentPage
                 }
                 else
                 {
-                    content.Children.Add(new BorderlessEntry
-                    {
-                        Placeholder = frameNames[i][1],
-                        FontFamily = "TiltNeon",
-                        FontSize = 18,
-                        TextColor = Color.FromArgb("#262626"),
-                        Margin = new Thickness(10, 0, 10, -3),
-                        HorizontalOptions = LayoutOptions.FillAndExpand
-                    });
+                    entryNames[i - 1].Placeholder = frameNames[i][1];
+                    entryNames[i - 1].FontFamily = "TiltNeon";
+                    entryNames[i - 1].FontSize = 18;
+                    entryNames[i - 1].TextColor = Color.FromArgb("#262626");
+                    entryNames[i - 1].Margin = new Thickness(10, 0, 10, -3);
+                    entryNames[i - 1].HorizontalOptions = LayoutOptions.FillAndExpand;
+
+                    content.Children.Add(entryNames[i - 1]);
                 }
             }
 
@@ -189,6 +192,9 @@ public partial class CreateAccountPage : ContentPage
 
     private void OnSlideConfirmed(object sender, EventArgs e)
     {
+        //string user = usernameEntry.Text;
+        //string email = emailEntry.Text;
+        //string mobile = mobileEntry.Text;
         Application.Current.MainPage = new ContainerStartPage();
     }
 }
