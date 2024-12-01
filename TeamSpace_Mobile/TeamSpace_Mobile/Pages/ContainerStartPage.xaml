@@ -13,17 +13,29 @@
 
         <Frame
             Grid.Row="1"
-            HasShadow="True"
-            CornerRadius="25"
-            BackgroundColor="White" 
-            HeightRequest="120" 
-            Margin="0,0,0,-40"
-            Padding="0, 10, 0, 60">
-            <StackLayout 
-                Orientation="Horizontal"
-                HorizontalOptions="Center"
-                x:Name="NavigateStack" 
-            />
+            BackgroundColor="Transparent"
+            BorderColor="Transparent"
+            Padding="0"
+            HeightRequest="150">
+            <AbsoluteLayout Padding="0, 30, 0, 0">
+                <BoxView
+                    x:Name="BoxViewBorder"
+                    CornerRadius="25"
+                    BackgroundColor="White" 
+                    HeightRequest="120"
+                    WidthRequest="480"
+                    Margin="0,0,0,-40"
+                />
+
+                <StackLayout 
+                    BackgroundColor="Transparent" 
+                    x:Name="BgNavStack"
+                    Orientation="Horizontal"
+                    HorizontalOptions="Center"
+                    Padding="10, 0"
+                    ZIndex="10"
+                />
+            </AbsoluteLayout>
         </Frame>
     </Grid>
 </ContentPage>

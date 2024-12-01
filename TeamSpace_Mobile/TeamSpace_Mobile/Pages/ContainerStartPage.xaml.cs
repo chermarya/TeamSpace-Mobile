@@ -26,6 +26,20 @@ public partial class ContainerStartPage : ContentPage
     Label profileLbl = new Label();
     Label[] navigateLbls;
 
+    BoxView overviewBox = new BoxView();
+    BoxView filesBox = new BoxView();
+    BoxView scheduleBox = new BoxView();
+    BoxView recruitersBox = new BoxView();
+    BoxView profileBox = new BoxView();
+    BoxView[] navigateBoxes;
+
+    VerticalStackLayout overviewLay = new VerticalStackLayout();
+    VerticalStackLayout filesLay = new VerticalStackLayout();
+    VerticalStackLayout scheduleLay = new VerticalStackLayout();
+    VerticalStackLayout recruitersLay = new VerticalStackLayout();
+    VerticalStackLayout profileLay = new VerticalStackLayout();
+    VerticalStackLayout[] navigateLays;
+
     public ContainerStartPage()
     {
         InitializeComponent();
@@ -44,12 +58,9 @@ public partial class ContainerStartPage : ContentPage
             navigateImgs[i].Source = imgNames[i] + "_icon_default";
         }
         overviewImg.Source = "overview_icon_selected";
-
-        for (int i = 0; i < navigateLbls.Length; i++)
-        {
-            navigateLbls[i].TextColor = Color.FromHsla(0, 0, 0, 0.5);
-        }
         overviewLbl.TextColor = Colors.Black;
+        overviewBox.Margin = new Thickness(0, -20, 0, 0);
+        overviewLay.Margin = 0;
     }
 
     private void BtnClicked_Overview(object sender, EventArgs e)
@@ -67,6 +78,18 @@ public partial class ContainerStartPage : ContentPage
             navigateLbls[i].TextColor = Color.FromHsla(0, 0, 0, 0.5);
         }
         overviewLbl.TextColor = Colors.Black;
+
+        for (int i = 0; i < navigateBoxes.Length; i++)
+        {
+            navigateBoxes[i].Margin = new Thickness(0, 10, 0, 0);
+        }
+        overviewBox.Margin = new Thickness(0, -20, 0, 0);
+
+        for (int i = 0; i < navigateLays.Length; i++)
+        {
+            navigateLays[i].Margin = new Thickness(0, 17, 0, 0);
+        }
+        overviewLay.Margin = 0;
     }
 
     private void BtnClicked_Files(object sender, EventArgs e)
@@ -84,6 +107,18 @@ public partial class ContainerStartPage : ContentPage
             navigateLbls[i].TextColor = Color.FromHsla(0, 0, 0, 0.5);
         }
         filesLbl.TextColor = Colors.Black;
+
+        for (int i = 0; i < navigateBoxes.Length; i++)
+        {
+            navigateBoxes[i].Margin = new Thickness(0, 10, 0, 0);
+        }
+        filesBox.Margin = new Thickness(0, -20, 0, 0);
+
+        for (int i = 0; i < navigateLays.Length; i++)
+        {
+            navigateLays[i].Margin = new Thickness(0, 17, 0, 0);
+        }
+        filesLay.Margin = 0;
     }
 
     private void BtnClicked_Schedule(object sender, EventArgs e)
@@ -101,6 +136,18 @@ public partial class ContainerStartPage : ContentPage
             navigateLbls[i].TextColor = Color.FromHsla(0, 0, 0, 0.5);
         }
         scheduleLbl.TextColor = Colors.Black;
+
+        for (int i = 0; i < navigateBoxes.Length; i++)
+        {
+            navigateBoxes[i].Margin = new Thickness(0, 10, 0, 0);
+        }
+        scheduleBox.Margin = new Thickness(0, -20, 0, 0);
+
+        for (int i = 0; i < navigateLays.Length; i++)
+        {
+            navigateLays[i].Margin = new Thickness(0, 17, 0, 0);
+        }
+        scheduleLay.Margin = 0;
     }
 
     private void BtnClicked_Recruiters(object sender, EventArgs e)
@@ -118,6 +165,18 @@ public partial class ContainerStartPage : ContentPage
             navigateLbls[i].TextColor = Color.FromHsla(0, 0, 0, 0.5);
         }
         recruitersLbl.TextColor = Colors.Black;
+
+        for (int i = 0; i < navigateBoxes.Length; i++)
+        {
+            navigateBoxes[i].Margin = new Thickness(0, 10, 0, 0);
+        }
+        recruitersBox.Margin = new Thickness(0, -20, 0, 0);
+
+        for (int i = 0; i < navigateLays.Length; i++)
+        {
+            navigateLays[i].Margin = new Thickness(0, 17, 0, 0);
+        }
+        recruitersLay.Margin = 0;
     }
 
     private void BtnClicked_Profile(object sender, EventArgs e)
@@ -135,6 +194,18 @@ public partial class ContainerStartPage : ContentPage
             navigateLbls[i].TextColor = Color.FromHsla(0, 0, 0, 0.5);
         }
         profileLbl.TextColor = Colors.Black;
+
+        for (int i = 0; i < navigateBoxes.Length; i++)
+        {
+            navigateBoxes[i].Margin = new Thickness(0, 10, 0, 0);
+        }
+        profileBox.Margin = new Thickness(0, -20, 0, 0);
+
+        for (int i = 0; i < navigateLays.Length; i++)
+        {
+            navigateLays[i].Margin = new Thickness(0, 17, 0, 0);
+        }
+        profileLay.Margin = 0;
     }
 
     private void CreateBtns()
@@ -181,20 +252,72 @@ public partial class ContainerStartPage : ContentPage
         }
     }
 
+    private void CreateBoxes()
+    {
+        navigateBoxes = [overviewBox, filesBox, scheduleBox, recruitersBox, profileBox];
+
+        for (int i = 0; i < navigateBoxes.Length; i++)
+        {
+            navigateBoxes[i].CornerRadius = 100;
+            navigateBoxes[i].WidthRequest = 70;
+            navigateBoxes[i].HeightRequest = 70;
+            navigateBoxes[i].Shadow = new Shadow { Brush = Colors.Black, Offset = new Point(0, 0) };
+            navigateBoxes[i].Margin = new Thickness(0, 10, 0, 0);
+            navigateBoxes[i].BackgroundColor = Colors.White;
+            navigateBoxes[i].HorizontalOptions = LayoutOptions.Center;
+        }
+    }
+
+    private void CreateLays()
+    {
+        navigateLays = [overviewLay, filesLay, scheduleLay, recruitersLay, profileLay];
+
+        for (int i = 0; i < navigateLays.Length; i++)
+        {
+            navigateLays[i].WidthRequest = 70;
+            navigateLays[i].Margin = new Thickness(0, 17, 0, 0);
+        }
+    }
+
     private void CreateIcons()
     {
         CreateBtns();
         CreateLbls();
         CreateImgs();
+        CreateBoxes();
+        CreateLays();
+
+        BoxViewBorder.Shadow = new Shadow { Brush=Colors.Black, Offset = new Point(0, 0) };
 
         for (int i = 0; i < imgNames.Length; i++)
         {
-            NavigateStack.Add(new VerticalStackLayout
+            var box = new BoxView
             {
-                navigateBtns[i],
+                CornerRadius = 0,
+                WidthRequest = 100,
+                HeightRequest = 90,
+                Margin = new Thickness(-20, 0, 0, 0),
+                BackgroundColor = Colors.White
+            };
+
+            if (i == 0)
+            {
+                box.Margin = new Thickness(-10, 0, 0, 0);
+                box.CornerRadius = 15;
+            }
+            else if (i == imgNames.Length - 1)
+            {
+                box.Margin = new Thickness(-20, 0, 0, 0);
+                box.CornerRadius = 15;
+            }
+
+            navigateLays[i].Children.Add(navigateBtns[i]);
+            navigateLays[i].Children.Add(
                 new VerticalStackLayout
                 {
-                    Margin = new Thickness(20,-50,20,0),
+                    WidthRequest = 70,
+                    BackgroundColor = Colors.Transparent,
+                    Margin = new Thickness(20, -50, 20, 0),
                     HorizontalOptions = LayoutOptions.Center,
                     VerticalOptions = LayoutOptions.Center,
                     Children =
@@ -203,7 +326,20 @@ public partial class ContainerStartPage : ContentPage
                         navigateLbls[i]
                     }
                 }
+            );
+
+            BgNavStack.Add(new AbsoluteLayout
+            {
+                WidthRequest = 95,
+                Padding = 0,
+                Children = {
+                    navigateBoxes[i],
+                    box,
+                    navigateLays[i]
+                }
             });
+
+            //NavigateLayout.Children.Add(navigateBoxes[i]);
         }
     }
 }
